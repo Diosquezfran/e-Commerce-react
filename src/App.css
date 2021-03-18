@@ -1,0 +1,16 @@
+.lista{
+  color:white;
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 20px;
+  list-style: none;
+  background-color: rgb(24, 0, 70);
+  
+}
+.imagen{
+  width: 25%;
+  height: 25%;
+}
+h3:hover{
+  color: rgb(240, 69, 69);
+}
