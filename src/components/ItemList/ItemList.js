@@ -1,11 +1,11 @@
-import Item from "./Item";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemList = (props) => (
     <>
       <h1>Lista</h1>
       <ul>
        {props.items.map((x) => (
-           <Item key={x.id} price={x.price} title={x.title} imgpictureUrl={x.imgpictureUrl} />
+           <ItemDetail key={x.id} price={x.price} title={x.title} imgpictureUrl={x.imgpictureUrl} />
        ))}
       </ul>
     </>
