@@ -1,11 +1,15 @@
 
-const ItemDetail = (props) => {
+const ItemDetail = ({detail2: detail}) =>{
     return(
-    <>
-    <li><img class="imagen" src={props.imgpictureUrl}/></li>
-    <li>{props.title}</li>
-    <li>{props.price}</li>
-    </>)
-}
+    <div>
+        <div className="col-6">
+        </div>
+        <img src={detail.img} className="imagen"></img>
+        <div className="col-6 ml-5 mr-5">
+            <h3>{detail.price}</h3>
+            <h3>{detail.title}</h3>
+        </div>
+    </div>
+)};
 
 export default ItemDetail;

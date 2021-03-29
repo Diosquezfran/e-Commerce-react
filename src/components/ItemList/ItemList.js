@@ -1,14 +1,11 @@
-import ItemDetail from "../ItemDetail/ItemDetail";
+import Item from "../Item/Item";
 
-const ItemList = (props) => (
-    <>
-      <h1>Lista</h1>
-      <ul>
-       {props.items.map((x) => (
-           <ItemDetail key={x.id} price={x.price} title={x.title} imgpictureUrl={x.imgpictureUrl} />
-       ))}
-      </ul>
-    </>
+const ItemList = ({items}) => (
+    <div className="card-columns">
+       {items.map(item => 
+           <Item key={item.id} {...item} />
+       )}
+    </div>
   );
 
 
