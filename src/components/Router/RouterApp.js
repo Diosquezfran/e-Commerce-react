@@ -9,9 +9,10 @@ const RouterApp = () =>{
             <div>
                 <NavBar />
                 <Switch>
-                <Route path="/Category/:id"><ItemListContainer greeting='Bienvenido'/></Route>
+                <Route path="/Category/:id"><ItemListContainer greeting='Bienvenido a Shop Online'/></Route>
                 <Route path="/Item/:id"><ItemDetailContainer/></Route>
-                <Route exact path="/"><ItemListContainer greeting='Bienvenido'/></Route>
+                <Route path="/Cart"></Route>
+                <Route exact path="/"><ItemListContainer greeting='Bienvenido a Shop Online'/></Route>
                 </Switch>
             </div>
         </Router>
