@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
               })
       }, [id])
       return(
-          <div className="">
+          <div className="container">
             {
               loading ? 
               <p>Loading...</p>
@@ -50,7 +50,19 @@ const ItemDetailContainer = () => {
 
 
 
-
+// const ItemDetail = ({detail2: detail}) => {
+//   return(
+//       <div className="card" style={{width: "18rem"}}>
+//         <img src={detail.img} className="card-img-top" alt={detail.title}/>
+//           <div class="card-body">
+//           <h5 class="card-title">{detail.title}</h5>
+//           <p class="card-text">${detail.price}</p>
+//           <a href="#" class="btn btn-success">añadir al carrito</a>
+//            <ItemCount stock={detail.stock} detail={detail}/>
+//           </div>
+//         </div>
+//   )
+// };
 
 
 

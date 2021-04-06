@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Counter = ({ initial = 0, stock, onAdd }) => {
+const Counter = ({ initial = 0, stock, onAdd, item }) => {
     const [counter, setCounter] = useState( initial );
-
     const handleAdd = () => {
         if ( counter < stock ) {
             setCounter( counter + 1 );
@@ -21,8 +20,6 @@ const Counter = ({ initial = 0, stock, onAdd }) => {
         e.preventDefault();
         setCounter( e.target.value ); 
     };
-
-    
 
 
     return(
