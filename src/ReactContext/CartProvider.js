@@ -6,8 +6,6 @@ import CartContext from "./CartContext";
 const CartProvider = () =>{
 
     const [cart, setCart] = useState([]);
-    console.log(cart);
-
 
     const addItem = (item, q) => {
         setCart([
@@ -15,25 +13,25 @@ const CartProvider = () =>{
         ])
     };
 
-    const removeItem = (item, q) => {
-        setCart(cart.filter(cart => cart.id !== item.id))
-        console.log('remove item')
+    const removeItem = (item) => {
+        setCart(cart.filter(cart => cart.id !== item.id));
+        console.log(cart)
+
     };
 
     const clear = () => {
         setCart([]);
-        console.log('clear')
+        console.log(cart)
+
     };
 
     const isInCart = (item) => {
         const isInCart = cart.find(cart => cart.id === item.id);
-        if (isInCart != undefined ){
+        if (isInCart !== undefined ){
             return true;
         }else{
             return false
         };
-
-        console.log(isInCart)
     };
 
     return(

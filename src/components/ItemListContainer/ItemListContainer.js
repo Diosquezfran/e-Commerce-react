@@ -4,6 +4,7 @@ import ItemList from "../ItemList/ItemList";
 
 
 const ItemListContainer = (props) => {
+    const [loading, setLoading] = useState(true)
     const [items, setItems] = useState([]);
     const {id} = useParams();
 
@@ -21,22 +22,29 @@ const ItemListContainer = (props) => {
                   id : 2,
                   title : 'pantalon',
                   price : 6000,
-                  img: "https://http2.mlstatic.com/D_NQ_NP_653255-MLA43802165234_102020-O.jpg",
+                  img: "https://img.hafter.com.ar/static/timthumb.php?q=86&w=800&src=uploads/estancias/2021/02/20i601mo-PANTALON-FEDRA-Verde2.jpg",
                   genero:"mujer",
                   stock: 6}]
                 );
-            }, 2000);
+            }, 1000);
           }).then((resultado) =>{
                   if (id){
                     setItems(resultado.filter( i => i.genero === id));
                   }else
-                    {setItems(resultado)}
+                    {setItems(resultado)};
+                    setLoading(false);
               })
       })
       return(
+        
           <div className="container">
               <h3>{props.greeting}</h3>
-              <ItemList items={items}/>
+              {
+                loading ? 
+                <p>Loading...</p>
+                :
+                <ItemList items={items}/>
+              }
           </div>
       )
 }

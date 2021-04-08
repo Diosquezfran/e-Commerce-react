@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Link, Route, Switch, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+import Cart from "../Cart/Cart";
 
 const RouterApp = () =>{
     return(
@@ -11,7 +12,7 @@ const RouterApp = () =>{
                 <Switch>
                 <Route path="/Category/:id"><ItemListContainer greeting='Bienvenido a Shop Online'/></Route>
                 <Route path="/Item/:id"><ItemDetailContainer/></Route>
-                <Route path="/Cart"></Route>
+                <Route path="/Cart"><Cart/></Route>
                 <Route exact path="/"><ItemListContainer greeting='Bienvenido a Shop Online'/></Route>
                 </Switch>
             </div>

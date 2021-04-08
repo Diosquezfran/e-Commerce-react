@@ -20,13 +20,13 @@ const ItemDetailContainer = () => {
                     id : 2,
                   title : 'pantalon',
                   price : 6000,
-                  img: "https://http2.mlstatic.com/D_NQ_NP_653255-MLA43802165234_102020-O.jpg",
+                  img: "https://img.hafter.com.ar/static/timthumb.php?q=86&w=800&src=uploads/estancias/2021/02/20i601mo-PANTALON-FEDRA-Verde2.jpg",
                   genero:"mujer",
                   stock: 6}]
                 );
             }, 2000);
           }).then((resultado) =>{
-              setDetail(resultado.filter(d => d.id === parseInt(id) ) [0]);
+              setDetail(resultado.filter(d => d.id === parseInt(id) )[0]);
               setLoading(false)
               })
       }, [id])
