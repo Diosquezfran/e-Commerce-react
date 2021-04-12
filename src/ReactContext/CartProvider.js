@@ -8,21 +8,30 @@ const CartProvider = () =>{
     const [cart, setCart] = useState([]);
 
     const addItem = (item, q) => {
-        setCart([
-        ...cart, {item, q}
-        ])
+        const isInCart = cart.find(cart => cart.item.id === item.id);
+        if (isInCart !== undefined ){
+        const newQ = isInCart.q + q;
+        const newCart = cart.filter(cart => cart.item.id !== item.id);
+
+            setCart([
+                ...newCart, {item, q:newQ}
+            ])
+        }else{
+            setCart([
+                ...cart, {item, q}
+            ])
+        }
+    
     };
 
-    const removeItem = (item) => {
-        setCart(cart.filter(cart => cart.id !== item.id));
+    const removeItem = (id) => {
+        setCart(cart.filter(cart => cart.item.id !== id));
         console.log(cart)
 
     };
 
     const clear = () => {
         setCart([]);
-        console.log(cart)
-
     };
 
     const isInCart = (item) => {

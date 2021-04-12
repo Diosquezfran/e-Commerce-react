@@ -5,22 +5,22 @@ import ItemCart from "./ItemCart"
 
 const Cart = () => {
     const {cart, clear} = useContext(CartContext);
+
     
     let cantidad = 0;
     for(let i = 0; i < cart.length; i++){
-        cantidad += cart[i].item.price;
+        cantidad += cart[i].item.price * cart[i].q;
     }
-
 
     return(
         <div className="container">
             {cart.map((cart, key) => 
                     <ItemCart key={key} cart={cart} />
             )}
-            {cart.length === 0 ? <div><h4>No tenés nada en el carrito</h4><button><Link to="/">home</Link></button></div> : <><li className="list-group-item d-flex justify-content-between align-items-center mt-4">
-                Total a pagar<span className="badge bg-primary rounded-pill">${cantidad}</span>
+            {cart.length === 0 ? <div><h4>No tenés nada en el carrito</h4><Link to="/" className="btn btn-success pl-10 pr-10 mt-2 mb-5 pl-3 pr-3">home</Link></div> : <><li className="list-group-item d-flex justify-content-between align-items-center mt-4">
+                Total a pagar<span className="badge bg-success rounded-pill">${cantidad}</span>
             </li>
-            <button onClick={clear}>Vaciar carito</button> </> }
+            <button onClick={clear} className="btn btn-danger mt-2">Vaciar carrito</button> </> }
             
         </div>
     )

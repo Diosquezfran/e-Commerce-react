@@ -24,8 +24,8 @@ const ItemListContainer = (props) => {
                   price : 6000,
                   img: "https://img.hafter.com.ar/static/timthumb.php?q=86&w=800&src=uploads/estancias/2021/02/20i601mo-PANTALON-FEDRA-Verde2.jpg",
                   genero:"mujer",
-                  stock: 6}]
-                );
+                  stock: 6}
+                ]);
             }, 1000);
           }).then((resultado) =>{
                   if (id){
@@ -36,15 +36,16 @@ const ItemListContainer = (props) => {
               })
       })
       return(
-        
-          <div className="container">
-              <h3>{props.greeting}</h3>
-              {
-                loading ? 
-                <p>Loading...</p>
-                :
-                <ItemList items={items}/>
-              }
+          <div>
+              <h3 className="m-4">{props.greeting}</h3>
+               <div className="container d-flex">
+                {
+                  loading ? 
+                  <p>Loading...</p>
+                  :
+                  <ItemList items={items}/>
+                }
+                </div>
           </div>
       )
 }

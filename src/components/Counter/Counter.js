@@ -31,7 +31,7 @@ const Counter = ({ initial = 0, stock, onAdd, item }) => {
                 <button onClick={handleAdd} className="btn btn-light" > + </button>
             </div>
             <button onClick={stock > 0 ? (e) => onAdd(counter, e) : (e) => e.preventDefault()} className="btn btn-primary "> Agregar al carrito </button>
-            {counter > 0 && <button className="btn btn-success pl-10 pr-10 mt-2 mb-5 pl-3 pr-3" ><Link to="/Cart" className="text-white">Finzalizar compra</Link></button>}
+            {counter > 0 && <Link to="/Cart" className="btn btn-success pl-10 pr-10 mt-2 mb-5 pl-3 pr-3">Finzalizar compra</Link>}
         </div>
     );
 
