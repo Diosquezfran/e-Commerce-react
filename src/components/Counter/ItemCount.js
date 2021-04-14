@@ -1,25 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Counter from "./Counter";
 import CartContext from "../../ReactContext/CartContext";
 
 const ItemCount = ( {stock, detail} ) => {
-    const {addItem, removeItem, clear, isInCart, cart} = useContext(CartContext )
-    const [NuevoStock, setNuevoStock] = useState(stock);
-    
+    const {addItem} = useContext(CartContext);
+    const [nuevoStock, setNuevoStock] = useState(stock);
+
+   
     const onAdd = (q) => {
-        if (q <= NuevoStock){
-            // alert(`Has agregado ${q} elementos al carrito`);
-            setNuevoStock( NuevoStock - q );
+        if (q < stock){
+            console.log(detail)
             addItem(detail, q);
-        } 
+            setNuevoStock(stock - q) ;
+        };
     };
+    useEffect( () =>{
+        setNuevoStock(stock)
+    },[stock]);
+
+   
     return(
         <div className="mx-auto">
-            <Counter initial={0} stock={NuevoStock} onAdd={onAdd} item={detail} />
+            <Counter initial={0} stock={nuevoStock} onAdd={onAdd} item={detail}/>
         </div>
     );
 };
-
-
 
 export default ItemCount;

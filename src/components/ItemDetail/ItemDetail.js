@@ -1,6 +1,6 @@
 import ItemCount from "../Counter/ItemCount"
 
-const ItemDetail = ({detail2: detail}) =>{
+const ItemDetail = ({detail}) =>{
     return(
     <div>
         <div className="col-6">

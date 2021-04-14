@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Counter = ({ initial = 0, stock, onAdd, item }) => {
+const Counter = ({ initial = 0, stock, onAdd }) => {
+    console.log(stock)
     const [counter, setCounter] = useState( initial );
+    
     const handleAdd = () => {
         if ( counter < stock ) {
             setCounter( counter + 1 );
@@ -11,7 +13,7 @@ const Counter = ({ initial = 0, stock, onAdd, item }) => {
     };
 
     const handleSubstract = () => {
-        if ( counter > 1 ) {
+        if ( counter >= 1 ) {
             setCounter( counter - 1 );
         };
     };

@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 
 const Item = ({id, item, img, title}) => {
     
-    <ItemDetailContainer item={item}/>
     return(
             <div className="col-md-3 " >
                 <div className="card text-center">

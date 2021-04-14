@@ -8,10 +8,11 @@ const CartProvider = () =>{
     const [cart, setCart] = useState([]);
 
     const addItem = (item, q) => {
+       
         const isInCart = cart.find(cart => cart.item.id === item.id);
         if (isInCart !== undefined ){
-        const newQ = isInCart.q + q;
-        const newCart = cart.filter(cart => cart.item.id !== item.id);
+            const newQ = isInCart.q + q;
+            const newCart = cart.filter(cart => cart.item.id !== item.id);
 
             setCart([
                 ...newCart, {item, q:newQ}
@@ -21,7 +22,7 @@ const CartProvider = () =>{
                 ...cart, {item, q}
             ])
         }
-    
+        console.log(isInCart)
     };
 
     const removeItem = (id) => {
