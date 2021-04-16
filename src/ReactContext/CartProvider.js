@@ -22,13 +22,10 @@ const CartProvider = () =>{
                 ...cart, {item, q}
             ])
         }
-        console.log(isInCart)
     };
 
     const removeItem = (id) => {
         setCart(cart.filter(cart => cart.item.id !== id));
-        console.log(cart)
-
     };
 
     const clear = () => {

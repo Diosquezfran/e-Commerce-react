@@ -9,7 +9,6 @@ const ItemCount = ( {stock, detail} ) => {
    
     const onAdd = (q) => {
         if (q < stock){
-            console.log(detail)
             addItem(detail, q);
             setNuevoStock(stock - q) ;
         };

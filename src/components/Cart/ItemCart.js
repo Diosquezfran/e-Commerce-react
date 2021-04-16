@@ -1,12 +1,11 @@
 import React, { useContext }from "react";
-import CartContext from "../../ReactContext/CartContext"
+import CartContext from "../../ReactContext/CartContext";
+
+
 const ItemCart = ({cart}) => {
     const {removeItem} = useContext(CartContext);
-
-
     return(
         <div>
-            
             <h4>Checkout</h4>
             <ul className="list-group mt-2">
                 <li className="list-group-item d-flex justify-content-between align-items-center">

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Counter = ({ initial = 0, stock, onAdd }) => {
-    console.log(stock)
     const [counter, setCounter] = useState( initial );
     
     const handleAdd = () => {
