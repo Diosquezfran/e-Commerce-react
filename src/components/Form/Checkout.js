@@ -29,10 +29,10 @@ const Checkout = () => {
 
 
     const order = getFirestore().collection("orders");
-    function createOrder() {
-        alert('create order');
-        order.add({buyer,
-                item,
+    const createOrder = async (e) => {
+        e.preventDefault();
+        await order.add({buyer,
+                cart,
                 date: firebase.firestore.Timestamp.fromDate(new Date()),
                 total: total
         })
