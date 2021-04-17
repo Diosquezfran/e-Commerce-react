@@ -29,15 +29,14 @@ const Checkout = () => {
 
 
     const order = getFirestore().collection("orders");
-    const createOrder = async (e) => {
-        e.preventDefault();
+    const createOrder = async () => {
         await order.add({buyer,
                 cart,
                 date: firebase.firestore.Timestamp.fromDate(new Date()),
                 total: total
         })
         .then(res => {
-            console.log('exito')
+            alert(`tu orden de compra es ${res.id}`)
         }).catch((error)=>{
             console.log(error);
         });
