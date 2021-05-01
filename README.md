@@ -7,11 +7,11 @@ e-Commerce dedicado a la venta de ropa.
 Primero debes descargar este repo, haciendo click en el botón "code" de arriba a la derecha,
 luego debes copiar en link del repositorio y clonarlo con el comando:
 ```
-_git clone_
+git clone
 ```
 Despues debes ejecutar el comando:
 ```
-_npm run start_
+npm run start
 ```
 
 ## Construido con 🛠️
