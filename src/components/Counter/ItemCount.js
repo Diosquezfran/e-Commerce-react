@@ -19,8 +19,10 @@ const ItemCount = ( {stock, detail} ) => {
 
    
     return(
-        <div className="mx-auto">
-            <Counter initial={0} stock={nuevoStock} onAdd={onAdd} item={detail}/>
+        <div className="container">
+            <div className="row">
+                    <Counter initial={0} stock={nuevoStock} onAdd={onAdd} item={detail}/>
+            </div>
         </div>
     );
 };

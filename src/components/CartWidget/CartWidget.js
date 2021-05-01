@@ -12,17 +12,14 @@ const CartWidget = () =>{
     }
 
     return (
-        <div>
-            {cantidad > 0 ? <Link to="/Cart" class="navbar-brand" href="#">
-            <img src="https://i.pinimg.com/originals/bf/19/90/bf1990e247292b756ca7926443f00ab6.jpg" alt="" width="30" height="24">
-            </img>
-            <span className="badge bg-primary rounded-pill" style={{color:"black"}}>{cantidad}</span>
-            </Link> : <img src="https://i.pinimg.com/originals/bf/19/90/bf1990e247292b756ca7926443f00ab6.jpg" alt="" width="30" height="24">
-            </img> }
+        <div className="ml-autok">
+            <Link to="/Cart" class="navbar-brand" href="#">
+            <i className="fas fa-shopping-cart" style={{color:"white"}}>
+             <span className="span-icon" style={{color:"white"}}>{cantidad === 0 ? "" : cantidad}</span>
+            </i>
+            </Link>
             
         </div>
     )
 };
 export default CartWidget;
-
-

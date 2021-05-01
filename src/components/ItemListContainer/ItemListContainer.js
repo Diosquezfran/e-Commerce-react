@@ -33,15 +33,14 @@ const ItemListContainer = (props) => {
 
     return(
           <div>
-              <h3 className="m-4">{props.greeting}</h3>
-               <div className="container d-flex">
+              <h3 className="text-greeting">{props.greeting}</h3>
+               <div className="container ">
 
                 {
                   loading ? 
                   <p>Loading...</p>
                   :
                <ItemList items={items.id, items}/>
-
                 }
                 </div>
           </div>

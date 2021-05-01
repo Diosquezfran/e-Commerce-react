@@ -5,7 +5,7 @@ import CartContext from "../../ReactContext/CartContext";
 const ItemCart = ({cart}) => {
     const {removeItem} = useContext(CartContext);
     return(
-        <div>
+        <div className="container">
             <h4>Checkout</h4>
             <ul className="list-group mt-2">
                 <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -15,7 +15,7 @@ const ItemCart = ({cart}) => {
                 <li className="list-group-item d-flex justify-content-between align-items-center">
                     Precio: ${cart.item.price}
                 </li>
-                <button onClick={() => removeItem(cart.item.id)} className="btn btn-primary">
+                <button onClick={() => removeItem(cart.item.id)} className="btn btn-dark">
                     Eliminar Item
                 </button>
             </ul>

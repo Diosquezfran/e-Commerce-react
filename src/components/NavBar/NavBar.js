@@ -17,11 +17,9 @@ function NavBar() {
               <Link to="/category/mujer" className="nav-link">
                 Mujer
               </Link>
-              <a id="icon" >
-              <CartWidget/>
-              </a>
             </div>
           </div>
+          <CartWidget/>
         </div>
       </nav>
     </div>

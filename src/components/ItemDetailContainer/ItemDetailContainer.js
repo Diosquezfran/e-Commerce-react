@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return(
-          <div className="container">
+          <div className="container d-flex">
             {
               loading ? 
               <p>Loading...</p>
