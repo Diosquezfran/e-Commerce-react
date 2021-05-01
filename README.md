@@ -26,8 +26,6 @@ npm run start
 ## Autor ✒️
 * **Frnaco Diosquez**
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (Franco Diosquez)
