@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 import RouterApp from "../components/Router/RouterApp";
+import { toast } from "react-toastify";
 import CartContext from "./CartContext";
 
 
 const CartProvider = () =>{
 
     const [cart, setCart] = useState([]);
+ 
 
     const addItem = (item, q) => {
        
@@ -21,11 +23,19 @@ const CartProvider = () =>{
             setCart([
                 ...cart, {item, q}
             ])
-        }
+        };
+        toast('Item agregado',{
+            type:"info",
+            autoClose:1500,
+        })
     };
 
     const removeItem = (id) => {
         setCart(cart.filter(cart => cart.item.id !== id));
+        toast('Item eliminado',{
+            type:"error",
+            autoClose:1500,
+        })
     };
 
     const clear = () => {

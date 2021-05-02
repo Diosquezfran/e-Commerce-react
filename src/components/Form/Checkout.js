@@ -3,12 +3,11 @@ import CartContext from "../../ReactContext/CartContext";
 import { getFirestore } from "../../Config/Firebase";
 import "firebase/firestore";
 import firebase from "firebase/app";
-import { Link } from "react-router-dom";
-import BuyEnd from "./BuyEnd";
-
+import { useHistory } from "react-router-dom";
 
 const Checkout = () => {
     const {cart, clear} = useContext(CartContext);
+    let history = useHistory();
     const [message, setMessage] = useState('')
     const initialValues = {
         name:'',
@@ -45,7 +44,8 @@ const Checkout = () => {
         });
         setBuyer({...initialValues});
         clear();
-        setMessage('Muchas Gracias por tu compra')
+        setMessage('Muchas Gracias por tu compra');
+        history.push("/thanks")
     };
      
 
