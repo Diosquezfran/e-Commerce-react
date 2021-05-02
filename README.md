@@ -13,7 +13,9 @@ Despues debes ejecutar el comando:
 ```
 npm run start
 ```
+## demo
 
+![demo](gif/demo.gif)
 ## Construido con 🛠️
 
 * React Js
