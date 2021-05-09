@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const BuyEnd = () => {
+
     return (
         <div className="background-end">
             <h1 className="text-end">Gracias por su compra</h1>

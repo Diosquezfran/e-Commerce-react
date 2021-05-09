@@ -128,6 +128,7 @@
   .background-end{
     background-image: url(https://res.cloudinary.com/druj3xeao/image/upload/c_scale,w_1280/v1619836769/React-img/img-react-coder/wp3376810-man-in-suit-wallpaper_kapo9v.jpg);
     background-repeat: no-repeat;
+    background-color: #423f3f;
     width: 100%;
     height: 100vh;
     justify-content: center;
